@@ -1,0 +1,38 @@
+/* Lembar Pertama */
+
+.bg-judul {
+    background-color: #FFFADD;
+    padding: 88px;
+    display: flex;
+    box-sizing: border-box;
+  }
+  
+  .judul-page {
+    justify-content: center; /* Memusatkan secara horizontal */
+    align-items: center; /* Memusatkan secara vertikal */
+    width: 100%;
+    text-align: center; /* Memusatkan teks di dalam elemen */
+  }
+  
+  /* Media Query untuk tampilan mobile */
+  @media (max-width: 48em) {
+    .bg-judul {
+      padding: 50px; /* Mengurangi padding agar sesuai dengan tampilan mobile */
+    }
+
+    .judul-page {
+      flex-direction: column;
+      margin-top: 30px;
+      text-align: center; /* Mengubah arah tata letak menjadi kolom */
+    }
+  }
+
+  .colored-marquee {
+    display: flex;
+    color: rgb(255, 255, 255); /* Warna teks */
+    background-color: #22668D; /* Warna latar belakang */
+    text-align: center;
+    font-size: 15px; /* Ukuran teks dalam marquee */
+    height: 35px; /* Tinggi marquee */
+    align-items: center;
+  }

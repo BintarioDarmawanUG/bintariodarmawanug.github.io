@@ -1,0 +1,31 @@
+.bg-judul {
+    background-color: #FFFADD;
+    padding: 100px;
+    display: flex;
+    box-sizing: border-box;
+
+  }
+  
+  .judul-page {
+    justify-content: center;
+    /* Memusatkan secara horizontal */
+    align-items: center;
+    /* Memusatkan secara vertikal */
+    width: 100%;
+    text-align: center;
+    /* Memusatkan teks di dalam elemen */
+  }
+  
+  /* Media Query untuk tampilan mobile */
+  
+  @media (max-width: 768px) {
+    .bg-judul {
+      padding: 50px;
+      /* Mengurangi padding agar sesuai dengan tampilan mobile */
+    }
+  
+    .judul-page {
+      flex-direction: column;
+      /* Mengubah arah tata letak menjadi kolom */
+    }
+  }
