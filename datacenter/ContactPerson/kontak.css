@@ -1,0 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+  background: #d7e1ec;
+}
+
+a {
+  color: #000;
+}
+
+/* header */
+
+.header {
+  background-color: #fff;
+  box-shadow: -10px 0 4px -2px rgba(0, 0, 0, 0.1), 10px 0 4px -2px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  border-radius: 12px;
+  top: 0;
+  left: 0;
+}
+
+/* header mobile */
+
+@media (max-width: 768px) {
+  .header {
+    box-shadow: none;
+    position: fixed;
+    background-color: rgba(247, 247, 247, 0.1);
+    box-shadow: -10px 0 4px -2px rgba(0, 0, 0, 0.1), 10px 0 4px -2px rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    border-radius: 12px;
+    /* Sesuaikan dengan preferensi Anda */
+  }
+}
+
+.header ul {
+  margin: 6px;
+  padding: 0;
+  border-radius: 20px;
+  list-style: none;
+  overflow: hidden;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-radius: 0px;
+  border-right: 1px solid transparent;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .header li a {
+    padding: 15px 15px;
+    /* Ngurangin padding pada tampilan mobile */
+    border-radius: 15px;
+    /* Ngurangin radius border pada tampilan mobile */
+    margin: 5px 0;
+    /* Memberikan jarak antar tautan pada tampilan mobile */
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Opasitas sedikit lebih tinggi pada tampilan mobile */
+  }
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  border-radius: 0px;
+  background-color: rgba(31, 30, 30, 0.3);
+  /* Gunakan nilai rgba dengan opasitas (0.8) yang lebih rendah */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* (Mobile) */
+
+@media (max-width: 768px) {
+  .header li a:hover,
+  .header .menu-btn:hover {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Transparansi dan warna latar belakang untuk mobile */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    /* Efek kabut */
+  }
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 13px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  background-color: tr;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: flex;
+  float: right;
+  padding: 33px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 350px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 200em) {
+  .header li {
+    float: left;
+  }
+
+  .header li a {
+    padding: 20px 30px;
+    color: #000;
+  }
+
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+/* Judul */
+
+.judul {
+  justify-content: center;
+  place-items: center;
+  /* Memusatkan secara horizontal */
+  align-items: center;
+  /* Memusatkan secara vertikal */
+  width: 100%;
+  text-align: center;
+  /* Memusatkan teks di dalam elemen */
+}
+
+/* Mengubah warna teks tautan menjadi hitam */
+
+.judul a {
+  color: black;
+}
+
+/* Media Query untuk tampilan mobile */
+
+@media (max-width: 768px) {
+  .judul {
+    flex-direction: column;
+    /* Mengubah arah tata letak menjadi kolom */
+  }
+}
+
+/* Footer */
+
+.footer {
+  justify-content: center;
+  /* Memusatkan secara horizontal */
+  align-items: center;
+  /* Memusatkan secara vertikal */
+  width: 100%;
+  text-align: center;
+  /* Memusatkan teks di dalam elemen */
+}
+
+/* Media Query untuk tampilan mobile */
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    /* Mengubah arah tata letak menjadi kolom */
+  }
+}
+
+/* Konten */
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Desktop Icon View */
+
+.wrapper .facebook {
+  background-image: url("https://www.svgrepo.com/show/452196/facebook-1.svg");
+  background-size: 50px;
+}
+
+.wrapper .twitter {
+  background-image: url("https://www.svgrepo.com/show/303115/twitter-3-logo.svg");
+  background-size: 50px;
+}
+
+.wrapper .instagram {
+  background-image: url("https://www.svgrepo.com/show/349410/instagram.svg");
+  background-size: 50px;
+}
+
+.wrapper .thread {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Threads_%28app%29.svg/800px-Threads_%28app%29.svg.png");
+  background-size: 50px;
+}
+
+.wrapper .youtube {
+  background-image: url("https://www.svgrepo.com/show/448261/youtube.svg");
+  background-size: 50px 50px;
+}
+
+.wrapper .email {
+  background-image: url("https://www.svgrepo.com/show/452213/gmail.svg");
+  background-size: 50px;
+  border-radius: 100%; /* Mengubah sudut-sudut gambar menjadi lingkaran */
+}
+
+.wrapper .wa {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg");
+  background-size: 50px 50px;
+}
+
+/* Mobile Icon View */
+
+@media (max-width: 600px) {
+  .wrapper .facebook {
+    background-size: 40px;
+  }
+
+  .wrapper .twitter {
+    background-size: 42px;
+  }
+
+  .wrapper .instagram {
+    background-size: 40px;
+  }
+
+  .wrapper .thread {
+    background-size: 40px;
+  }
+
+  .wrapper .youtube {
+    background-size: 40px 40px;
+  }
+
+  .wrapper .email {
+    background-size: 40px 40px;
+  }
+
+  .wrapper .wa {
+    background-size: 40px 40px;
+  }
+}
+
+/* Desktop View */
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Mobile View */
+
+@media (max-width: 600px) {
+  .wrapper {
+    flex-direction: column;
+    /* Tampilkan ikon dalam satu kolom */
+    align-items: center;
+  }
+
+  .wrapper .icon {
+    margin: 5px;
+    /* Perkecil margin di sekitar ikon */
+    width: 40px;
+    /* Ubah ukuran ikon */
+    height: 40px;
+    padding: 10px;
+    /* Sesuaikan padding */
+    font-size: 14px;
+    /* Sesuaikan ukuran font */
+  }
+
+  .wrapper .tooltip {
+    top: 55px;
+    /* Ubah posisi tooltip untuk tampilan mobile */
+    font-size: 12px;
+    /* Sesuaikan ukuran font tooltip */
+  }
+}
+
+/* Animation */
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background-color: #ffffff;
+  color: #3b5999;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #ffffff;
+  color: #e1306c;
+}
+
+.wrapper .thread:hover .tooltip,
+.wrapper .thread:hover .tooltip::before {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background-color: #ffffff;
+  color: #de463b;
+}
+
+.wrapper .email:hover,
+.wrapper .email:hover .tooltip,
+.wrapper .email:hover .tooltip::before {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.wrapper .wa:hover,
+.wrapper .wa:hover .tooltip,
+.wrapper .wa:hover .tooltip::before {
+  background-color: #ffffff;
+  color: #00f867;
+}

@@ -1,0 +1,157 @@
+.acv-judul {
+    background-color: #ffffff;
+    padding: 30px;
+    display: flex;
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 768px) {
+    .acv-judul {
+      padding: 50px;
+    }
+  }
+  
+  /* Kontainer Isi Achievement */
+  
+  .ktn {
+    background-color: #ebe8e8;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: row;
+    border-radius: 40px;
+  }
+  
+  .ktn-t {
+    background-color: #dad5d5;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: row;
+    border-radius: 20px;
+  }
+  
+  .ktn-transparent {
+    background-color: transparent;
+    padding: 0px;
+    margin-right: 35px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: row;
+    border-radius: 20px;
+  }
+  
+  .ktn-buton {
+    background-color: #ebe8e8;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    border-radius: 40px;
+  }
+  
+  .ktn i {
+    max-width: 27%;
+    height: auto;
+    margin-right: 60px;
+    border-radius: 0px;
+    /* Menentukan besarnya lengkungan */
+  }
+  
+  .ktn-text {
+    flex: 1;
+    text-align: justify;
+  }
+  
+  .ktn-text h5 {
+    margin: 0 0 10px;
+    text-align: left;
+    text-align: justify;
+  }
+  
+  .ktn-text h2 {
+    margin: 0 0 10px;
+    text-align: left;
+  }
+  
+  .ktn-text p {
+    margin: 0;
+    text-align: justify;
+    text-align: left;
+    margin-bottom: 7px;
+  }
+  
+  /* Media Query untuk tata letak mobile Foto Profil */
+  
+  @media (max-width: 600px) {
+    .ktn {
+      flex-direction: column;
+      /* Mengubah arah tata letak menjadi kolom dengan gambar di atas */
+      text-align: center;
+      /* Mengatur teks ke tengah */
+    }
+  
+    .ktn-t {
+      flex-direction: column;
+      /* Mengubah arah tata letak menjadi kolom dengan gambar di atas */
+      text-align: center;
+      /* Mengatur teks ke tengah */
+    }
+  
+    .ktn-transparent {
+      flex-direction: column;
+      /* Mengubah arah tata letak menjadi kolom dengan gambar di atas */
+      text-align: center;
+      /* Mengatur teks ke tengah */
+    }
+  
+    .ktn i {
+      max-width: 100%;
+      /* Mengurangi lebar gambar agar sesuai dengan lebar layar */
+      margin-right: 0;
+      margin-bottom: 40px;
+      margin-top: 20px;
+      /* Memberi jarak antara gambar dan teks di atasnya */
+    }
+  
+    .ktn-text {
+      margin-right: 0;
+      /* Menghapus margin kanan pada tampilan mobile */
+      margin-bottom: 10px;
+      /* Menambah jarak antar paragraf pada tampilan mobile */
+      text-align: justify;
+      /* Memjustifikasi teks agar terlihat rapi */
+      text-align: left;
+      /* Membuat tulisan menjadi rata kiri */
+    }
+  }
+  
+  /* Kontainer Tombol */
+  
+  .buton {
+    font-family: 'poppins';
+    color: #fdfdfd;
+    font-size: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    padding: 13px 35px;
+    border-radius: 25px;
+    background: #000000;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .buton:hover {
+    background-color: #47d7b0;
+    box-shadow: 0px 15px 20px rgba(90, 167, 136, 0.4);
+    color: #030303;
+    transform: translateY(0.5px);
+    /* Animasi */
+  }
